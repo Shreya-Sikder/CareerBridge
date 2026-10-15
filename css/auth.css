@@ -1,0 +1,145 @@
+.auth {
+    background: #eef2fb;
+    padding: 48px 24px;
+    min-height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border: 1px solid #e6eaf3;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.auth-sub {
+    font-size: 14px;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 4px;
+    background: #f1f4fb;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.tab.on {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.field input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #d9e0ee;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.field input::placeholder {
+    color: #94a3b8;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.check {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.check a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-alt {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 18px;
+}
+
+.auth-alt a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+@media (max-width: 620px) {
+    .auth {
+        padding: 28px 16px;
+    }
+
+    .auth-card {
+        padding: 24px;
+    }
+}
+
+.alert {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: #b91c1c;
+}
+
+.alert p {
+    margin-bottom: 4px;
+}
+
+.alert p:last-child {
+    margin-bottom: 0;
+}

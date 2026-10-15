@@ -1,0 +1,428 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #17233d;
+    background: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.nav {
+    height: 72px;
+    background: #ffffff;
+    border-bottom: 1px solid #eef1f6;
+}
+
+.nav-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #17233d;
+}
+
+.blue {
+    color: #2864e8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #667085;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2864e8;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    background: #f5f8ff;
+    padding: 75px 20px;
+    text-align: center;
+    border-bottom: 1px solid #edf1f8;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label,
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2864e8;
+}
+
+.hero h1 {
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #17233d;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 18px auto 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.main-content {
+    padding: 75px 0;
+}
+
+
+/* ================================
+   SECTION HEADING
+================================ */
+
+.process-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 90px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #17233d;
+}
+
+.section-heading p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+
+/* ================================
+   CANDIDATE STEPS
+================================ */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    position: relative;
+    min-height: 220px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+    transition: 0.25s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    border-color: #cddcff;
+    box-shadow: 0 12px 30px rgba(31, 55, 100, 0.08);
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #edf3ff;
+    color: #2864e8;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.step h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #17233d;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+
+/* ================================
+   SPECIAL STEPS
+================================ */
+
+.step.highlight {
+    background: #f8faff;
+    border-color: #dbe5ff;
+}
+
+.step.success {
+    background: #f7fcfa;
+    border-color: #d6eee2;
+}
+
+.step.success .step-number {
+    background: #e4f7ed;
+    color: #15945c;
+}
+
+.special-tag {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #eaf1ff;
+    color: #2864e8;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   COMPANY SECTION
+================================ */
+
+.company-section {
+    max-width: 1100px;
+}
+
+.company-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.company-card {
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+    transition: 0.25s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(31, 55, 100, 0.08);
+}
+
+.company-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf3ff;
+    color: #2864e8;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.company-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.company-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    background: #17233d;
+    border-radius: 20px;
+}
+
+.cta h2 {
+    color: #ffffff;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #b8c2d5;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    background: #ffffff;
+    color: #17233d;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px 0;
+    border-top: 1px solid #eef1f6;
+    text-align: center;
+}
+
+footer p {
+    font-size: 11px;
+    color: #98a2b3;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .company-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .steps,
+    .company-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .process-section {
+        width: 92%;
+    }
+
+    .main-content {
+        padding: 50px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+}

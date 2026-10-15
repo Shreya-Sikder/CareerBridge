@@ -1,0 +1,281 @@
+/* Layout shell shared by both dashboards */
+
+.dash-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #ffffff;
+    border-right: 1px solid #e8ecf4;
+    padding: 18px 14px;
+}
+
+.sidebar-logo {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 6px 10px 20px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.nav-item.active {
+    background: #eaf0ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.dash-main {
+    flex: 1;
+    background: #f7f9fd;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e8ecf4;
+    padding: 14px 26px;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-chip {
+    text-align: right;
+}
+
+.user-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-role {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.dash-content {
+    padding: 26px;
+}
+
+/* Summary numbers */
+
+.metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.metric-card {
+    background: #ffffff;
+    border: 1px solid #e6eaf3;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2563eb;
+    line-height: 1.3;
+}
+
+.metric-label {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Content panels */
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #e6eaf3;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.panel-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-note {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 14px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.filter-tab {
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: #f1f4fb;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.filter-tab.active {
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Tables */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e6eaf3;
+}
+
+.data-table td {
+    font-size: 13px;
+    padding: 12px;
+    border-bottom: 1px solid #f1f4fb;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.row-title {
+    font-weight: 600;
+}
+
+.row-muted {
+    color: #64748b;
+}
+
+/* Status pills */
+
+.status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.status-applied {
+    background: #eaf0ff;
+    color: #2563eb;
+}
+
+.status-grooming {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.status-failed {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-completed {
+    background: #dcfce7;
+    color: #059669;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #059669;
+}
+
+.status-closed {
+    background: #f1f4fb;
+    color: #64748b;
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+/* Question list on the company side */
+
+.question-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e6eaf3;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+.question-text {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.question-meta {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+    .dash-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e8ecf4;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .metric-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dash-content {
+        padding: 18px;
+    }
+}

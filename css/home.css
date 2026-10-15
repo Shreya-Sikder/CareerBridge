@@ -1,0 +1,111 @@
+/* CareerBridge - dashboard tiles and panels.
+   Loads after jobs.css and only adds what the two home pages need. */
+
+.metric-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.metric {
+    flex-grow: 1;
+    flex-basis: 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.metric-flag {
+    border-color: #fcd34d;
+    background: #fffbeb;
+}
+
+.metric-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f1c33;
+}
+
+.metric-label {
+    display: block;
+    font-size: 12px;
+    color: #5b6b85;
+    margin-top: 2px;
+}
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.panel-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.panel .data-table {
+    border: none;
+}
+
+.panel .empty {
+    border: none;
+    padding: 20px;
+}
+
+.empty-action {
+    margin: 12px 0 0 0;
+}
+
+.action-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.action-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.action-item:last-child {
+    border-bottom: none;
+}
+
+.action-main {
+    flex-grow: 1;
+}
+
+.action-side {
+    flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+    .metric-row {
+        flex-wrap: wrap;
+    }
+
+    .metric {
+        flex-basis: 40%;
+    }
+
+    .action-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

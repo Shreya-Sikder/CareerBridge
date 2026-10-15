@@ -1,0 +1,675 @@
+/* CareerBridge - candidate profile.
+   Loads after dashboard.css and jobs.css, so these rules win on
+   equal specificity. Palette and font match the rest of the site:
+   #2563eb primary, #0f1c33 navy, Poppins. */
+
+/* ---------------------------------------------------------------
+   Page frame
+   --------------------------------------------------------------- */
+
+.shell-main {
+    padding: 24px 28px 48px 28px;
+}
+
+/* The scroll pane stays full width so the scrollbar sits on the
+   window edge; the readable column is set on the content instead. */
+.shell-main > * {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shell-top {
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------------
+   Notices
+   --------------------------------------------------------------- */
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 3px solid #2563eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #1e3a5f;
+    margin: 0 0 14px 0;
+}
+
+.notice-done {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    border-left-color: #16a34a;
+    color: #14532d;
+}
+
+.errors {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 3px solid #dc2626;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+}
+
+.error-line {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #b91c1c;
+    margin: 0 0 5px 0;
+}
+
+.error-line:last-child {
+    margin-bottom: 0;
+}
+
+.hint-warn {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 7px;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #92400e;
+    margin: 12px 0 0 0;
+}
+
+/* ---------------------------------------------------------------
+   Cards
+   --------------------------------------------------------------- */
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid #e4e9f0;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 2px rgba(15, 28, 51, 0.04);
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.section-heading {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #0f1c33;
+    margin: 0;
+}
+
+.card-head .section-heading {
+    margin: 0;
+}
+
+.saved-tag {
+    flex-shrink: 0;
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    border-radius: 20px;
+    padding: 3px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.section-help {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin: -6px 0 18px 0;
+}
+
+/* ---------------------------------------------------------------
+   Fields
+   --------------------------------------------------------------- */
+
+.field {
+    margin-bottom: 16px;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.field-row {
+    display: flex;
+    gap: 16px;
+}
+
+.field-label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #334155;
+    margin: 0 0 6px 0;
+}
+
+.field-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d5dce6;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    color: #0f1c33;
+    background: #ffffff;
+    transition: border-color 0.12s, box-shadow 0.12s;
+}
+
+.field-input::placeholder {
+    color: #9aa7b8;
+}
+
+.field-input:hover {
+    border-color: #b9c4d2;
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.field-area {
+    resize: vertical;
+    min-height: 84px;
+    line-height: 1.55;
+}
+
+.field-multi {
+    padding: 6px;
+    min-height: 180px;
+}
+
+.field-help {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 6px 0 0 0;
+}
+
+input[type="file"].field-input {
+    padding: 9px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------- */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.12s, box-shadow 0.12s;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn-primary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active {
+    background: #1e40af;
+}
+
+.btn-secondary,
+.btn-plain-border {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #d5dce6;
+    border-radius: 8px;
+    color: #0f1c33;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    padding: 10px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.12s, border-color 0.12s;
+}
+
+.btn-secondary:hover,
+.btn-plain-border:hover {
+    background: #f6f8fb;
+    border-color: #b9c4d2;
+}
+
+.btn-secondary:focus-visible,
+.btn-plain-border:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22);
+}
+
+.btn-secondary:disabled {
+    color: #9aa7b8;
+    background: #f6f8fb;
+    cursor: not-allowed;
+}
+
+.btn-plain {
+    font-size: 14px;
+    color: #64748b;
+    text-decoration: none;
+    padding: 10px 6px;
+}
+
+.btn-plain:hover {
+    color: #0f1c33;
+    text-decoration: underline;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 6px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+.link-danger {
+    color: #dc2626;
+}
+
+.link-danger:hover {
+    color: #b91c1c;
+}
+
+.inline-form {
+    display: inline-flex;
+}
+
+/* ---------------------------------------------------------------
+   Saved detail list
+   --------------------------------------------------------------- */
+
+.detail-list {
+    margin: 0;
+    padding: 0;
+}
+
+.detail-pair {
+    display: flex;
+    gap: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-pair:first-child {
+    padding-top: 0;
+}
+
+.detail-pair:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-key {
+    width: 128px;
+    flex-shrink: 0;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #64748b;
+    margin: 0;
+}
+
+.detail-value {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #0f1c33;
+    margin: 0;
+    word-break: break-word;
+}
+
+/* ---------------------------------------------------------------
+   Skill chips and picker
+   --------------------------------------------------------------- */
+
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 4px 0;
+    padding: 0;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+    padding: 5px 5px 5px 13px;
+    font-size: 13px;
+    color: #1e40af;
+}
+
+.chip-label {
+    line-height: 1.3;
+}
+
+.chip-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #3b6fd4;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.12s, color 0.12s;
+}
+
+.chip-remove:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.chip-remove:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.45);
+}
+
+.picker-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    margin-top: 14px;
+}
+
+.picker-search {
+    flex: 1 1 40%;
+}
+
+.picker-select {
+    flex: 1 1 60%;
+    cursor: pointer;
+}
+
+.picker-row .btn-secondary {
+    flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------
+   Repeating rows
+   --------------------------------------------------------------- */
+
+.row-list {
+    margin-bottom: 4px;
+}
+
+.repeat-row {
+    border: 1px solid #e4e9f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    background: #fafbfd;
+}
+
+.repeat-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.repeat-number {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 0.01em;
+}
+
+.remove-row {
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+.repeat-row .field:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------
+   Saved education and experience entries
+   --------------------------------------------------------------- */
+
+.entry-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.entry-item {
+    border-bottom: 1px solid #f1f5f9;
+    padding: 12px 0;
+}
+
+.entry-item:first-child {
+    padding-top: 0;
+}
+
+.entry-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cell-strong {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #0f1c33;
+    margin-bottom: 2px;
+}
+
+.cell-sub {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.entry-text {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #334155;
+    margin-top: 7px;
+}
+
+/* ---------------------------------------------------------------
+   CV
+   --------------------------------------------------------------- */
+
+.file-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f6f8fb;
+    border: 1px solid #e4e9f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+    margin: 0;
+    word-break: break-all;
+}
+
+.link-action {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.link-action:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------
+   Tablet
+   --------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .shell-main {
+        padding: 20px 20px 40px 20px;
+    }
+
+    .form-card {
+        padding: 18px 18px;
+    }
+
+    .detail-key {
+        width: 110px;
+    }
+}
+
+/* ---------------------------------------------------------------
+   Mobile
+   --------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+    .shell-main {
+        padding: 16px 14px 36px 14px;
+    }
+
+    .form-card {
+        padding: 16px 14px;
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+
+    .card-head {
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+    }
+
+    /* Stacking is what stops the cramped two-up fields on a phone. */
+    .field-row {
+        display: block;
+    }
+
+    .field-row .field {
+        margin-bottom: 16px;
+    }
+
+    .picker-row {
+        display: block;
+    }
+
+    .picker-search,
+    .picker-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .picker-row .btn-secondary {
+        width: 100%;
+    }
+
+    .detail-pair {
+        display: block;
+        padding: 9px 0;
+    }
+
+    .detail-key {
+        width: auto;
+        margin-bottom: 3px;
+    }
+
+    .form-actions {
+        gap: 8px;
+    }
+
+    .form-actions .btn-primary,
+    .form-actions .btn-secondary,
+    .form-actions .btn-plain-border {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .repeat-row {
+        padding: 14px;
+    }
+}
+
+/* ---------------------------------------------------------------
+   Company logo
+   --------------------------------------------------------------- */
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f6f8fb;
+    border: 1px solid #e4e9f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.logo-image {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid #e4e9f0;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.logo-name {
+    font-size: 13.5px;
+    color: #475569;
+    word-break: break-all;
+}

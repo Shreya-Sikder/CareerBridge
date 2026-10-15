@@ -1,0 +1,662 @@
+/* CareerBridge - shell, forms and tables for the job pages.
+   Palette and font match landingpage.css and auth.css.
+   Class names are prefixed or distinct so nothing here collides
+   with dashboard.css. */
+
+body {
+    margin: 0;
+    font-family: Poppins, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #0f1c33;
+}
+
+.shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.shell-side {
+    width: 210px;
+    background: #0f1c33;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shell-brand {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 20px 18px 20px;
+}
+
+.shell-nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.shell-link {
+    color: #c7d0e0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 9px 20px;
+}
+
+.shell-link.on {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+.shell-logout {
+    color: #c7d0e0;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 9px 20px;
+}
+
+.shell-main {
+    flex-grow: 1;
+    padding: 18px 24px;
+}
+
+.shell-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.shell-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.shell-who {
+    font-size: 13px;
+    color: #5b6b85;
+}
+
+.notice {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 13px;
+    margin: 0 0 14px 0;
+}
+
+.errors {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+}
+
+.error-line {
+    font-size: 13px;
+    color: #b91c1c;
+    margin: 0 0 4px 0;
+}
+
+.error-line:last-child {
+    margin-bottom: 0;
+}
+
+.page-actions {
+    margin-bottom: 14px;
+}
+
+/* Forms */
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px;
+    max-width: 720px;
+}
+
+.field {
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+
+.field-row {
+    display: flex;
+    gap: 14px;
+}
+
+.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.field-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    color: #0f1c33;
+    background: #ffffff;
+}
+
+.field-input:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 1px;
+}
+
+.field-area {
+    resize: vertical;
+}
+
+.field-multi {
+    padding: 4px;
+}
+
+.field-help {
+    font-size: 12px;
+    color: #5b6b85;
+    margin: 5px 0 0 0;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-plain {
+    font-size: 14px;
+    color: #5b6b85;
+    text-decoration: none;
+}
+
+/* Tables */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.data-table th {
+    text-align: left;
+    font-weight: 600;
+    color: #5b6b85;
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eef2f7;
+    vertical-align: top;
+}
+
+.cell-strong {
+    display: block;
+    font-weight: 600;
+}
+
+.cell-sub {
+    display: block;
+    font-size: 12px;
+    color: #5b6b85;
+}
+
+.cell-actions {
+    white-space: nowrap;
+}
+
+.link-action {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.link-muted {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 13px;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.pill {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 2px 9px;
+    font-size: 12px;
+}
+
+.pill-green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pill-amber {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.pill-grey {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+/* Empty state */
+
+.empty {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 26px;
+    text-align: center;
+}
+
+.empty-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.empty-text {
+    font-size: 13px;
+    color: #5b6b85;
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .shell {
+        flex-direction: column;
+    }
+
+    .shell-side {
+        width: auto;
+    }
+
+    .shell-nav {
+        flex-direction: row;
+    }
+
+    .field-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.pill-blue {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.back-link {
+    margin: 0 0 12px 0;
+}
+
+.job-meta {
+    font-size: 13px;
+    color: #5b6b85;
+    margin: 0 0 10px 0;
+}
+
+.job-description {
+    font-size: 14px;
+    margin: 0 0 12px 0;
+}
+
+.skill-line {
+    margin: 5px 0 0 0;
+}
+
+.skill-line .pill {
+    margin-right: 5px;
+}
+
+.rule-list {
+    margin: 0 0 14px 0;
+    padding-left: 18px;
+}
+
+.rule-item {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+
+/* ===============================================================
+   Fixed sidebar, independently scrolling content.
+
+   The shell is a full-viewport flex row that never scrolls itself.
+   The sidebar is pinned and the main column owns the scrollbar, so
+   the nav and the Logout link stay put while the content moves.
+
+   These rules come last on purpose: they override the earlier
+   720px block above, which stacked the shell for small screens.
+   =============================================================== */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.shell {
+    display: flex;
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.shell-side {
+    width: 210px;
+    flex-shrink: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.shell-brand {
+    flex-shrink: 0;
+}
+
+/* The nav takes the free space and scrolls on its own if a very
+   short window cannot fit every link. */
+.shell-nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/* margin-top: auto pins this to the bottom of the sidebar whatever
+   the nav height is, so it can never drift into the middle. */
+.shell-logout {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.shell-logout:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* The only scrolling region. */
+.shell-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-gutter: stable;
+}
+
+/* ---------------------------------------------------------------
+   Small screens
+
+   Two scroll panes side by side do not work on a phone: the sidebar
+   would eat a third of the width and the content pane would be a
+   narrow slot. Below 720px the shell goes back to a normal document
+   scroll with the nav stuck to the top.
+   --------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .shell {
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+
+    .shell-side {
+        width: auto;
+        height: auto;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 10px 14px;
+        overflow: visible;
+    }
+
+    .shell-brand {
+        padding: 0 10px 0 0;
+        font-size: 15px;
+    }
+
+    .shell-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: visible;
+        min-height: 0;
+    }
+
+    .shell-link {
+        padding: 7px 10px;
+        border-radius: 6px;
+    }
+
+    .shell-logout {
+        margin-top: 0;
+        margin-left: auto;
+        padding: 7px 10px;
+        border-top: none;
+    }
+
+    .shell-main {
+        height: auto;
+        overflow: visible;
+    }
+}
+
+
+/* ===============================================================
+   Sidebar pinned with position: fixed.
+
+   The flex approach above depends on every ancestor cooperating.
+   A rule in another stylesheet that changes .shell or body layout
+   can quietly undo it. position: fixed takes the sidebar out of the
+   document entirely, so it stays put no matter what any other rule
+   does to its parents.
+
+   !important here is deliberate: this has to beat dashboard.css,
+   which loads first and is not visible to this file.
+   =============================================================== */
+
+.shell-side {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 210px !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    background: #0f1c33 !important;
+    padding: 20px 0 0 0 !important;
+    z-index: 100;
+}
+
+.shell-brand {
+    flex-shrink: 0 !important;
+}
+
+.shell-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+}
+
+.shell-logout {
+    flex-shrink: 0 !important;
+    margin-top: auto !important;
+    padding: 14px 20px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* The sidebar no longer occupies space, so the content column has to
+   be pushed clear of it by hand. */
+.shell-main {
+    margin-left: 210px !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 720px) {
+
+    .shell-side {
+        position: sticky !important;
+        top: 0 !important;
+        bottom: auto !important;
+        width: auto !important;
+        height: auto !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        padding: 10px 14px !important;
+        overflow: visible !important;
+    }
+
+    .shell-nav {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        overflow: visible !important;
+    }
+
+    .shell-logout {
+        margin-top: 0 !important;
+        margin-left: auto !important;
+        padding: 7px 10px !important;
+        border-top: none !important;
+    }
+
+    .shell-main {
+        margin-left: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+
+/* A block that cannot be used until an earlier one is saved. */
+.card-locked {
+    opacity: 0.6;
+}
+
+.card-locked .section-heading {
+    color: #64748b;
+}
+
+
+.filter-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.filter-tab {
+    border: 1px solid #d5dce6;
+    border-radius: 18px;
+    color: #475569;
+    font-size: 13px;
+    padding: 6px 14px;
+    text-decoration: none;
+}
+
+.filter-tab:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.filter-tab.on {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+
+.company-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.company-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.company-meta {
+    min-width: 0;
+}
+
+.company-facts {
+    font-size: 13px;
+    color: #5b6b85;
+    margin: 3px 0 0 0;
+}
